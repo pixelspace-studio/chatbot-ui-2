@@ -169,6 +169,7 @@ export const ChatFilesDisplay: FC<ChatFilesDisplayProps> = ({}) => {
                 className="relative flex h-[64px] cursor-pointer items-center space-x-4 rounded-xl hover:opacity-50"
               >
                 <Image
+                  unoptimized
                   className="rounded"
                   // Force the image to be 56px by 56px
                   style={{

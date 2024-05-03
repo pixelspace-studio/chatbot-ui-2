@@ -330,6 +330,7 @@ export const ChatInput: FC<ChatInputProps> = ({}) => {
           <div className=" bg-pixelspace-gray-90 hover:bg-pixelspace-gray-80 mx-auto flex w-fit items-center space-x-[10px] rounded-full p-2">
             {selectedAssistant.image_path ? (
               <Image
+                unoptimized
                 style={{ width: "24px", height: "24px" }}
                 className="rounded-full "
                 src={

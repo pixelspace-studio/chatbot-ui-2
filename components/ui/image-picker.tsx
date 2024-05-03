@@ -76,6 +76,7 @@ const ImagePicker: FC<ImagePickerProps> = ({
     <div>
       {previewSrc && (
         <Image
+          unoptimized
           style={{ width: `${width}px`, height: `${width}px` }}
           className="rounded-full"
           height={width}
@@ -100,6 +101,7 @@ const ImagePicker: FC<ImagePickerProps> = ({
         ) : (
           <div className="flex items-center space-x-1 overflow-hidden">
             <Image
+              unoptimized
               style={{ width: 16, height: 16 }}
               className="rounded-full  "
               height={width}

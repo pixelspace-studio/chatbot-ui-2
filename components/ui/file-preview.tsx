@@ -36,6 +36,7 @@ export const FilePreview: FC<FilePreviewProps> = ({
               <DrawingCanvas imageItem={imageItem} />
             ) : (
               <Image
+                unoptimized
                 className="rounded"
                 src={imageItem.base64 || imageItem.url}
                 alt="File image"

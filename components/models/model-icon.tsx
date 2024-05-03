@@ -41,6 +41,7 @@ export const ModelIcon: FC<ModelIconProps> = ({
     case "mistral":
       return (
         <Image
+          unoptimized
           className={cn(
             "rounded-sm p-1",
             theme === "dark" ? "bg-white" : "border-[1px] border-black"
@@ -54,6 +55,7 @@ export const ModelIcon: FC<ModelIconProps> = ({
     case "groq":
       return (
         <Image
+          unoptimized
           className={cn(
             "rounded-sm p-0",
             theme === "dark" ? "bg-white" : "border-[1px] border-black"
@@ -91,6 +93,7 @@ export const ModelIcon: FC<ModelIconProps> = ({
     case "perplexity":
       return (
         <Image
+          unoptimized
           className={cn(
             "rounded-sm p-1",
             theme === "dark" ? "bg-white" : "border-[1px] border-black"

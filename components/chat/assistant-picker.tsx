@@ -96,6 +96,7 @@ export const AssistantPicker: FC<AssistantPickerProps> = ({}) => {
                 >
                   {item.image_path ? (
                     <Image
+                      unoptimized
                       src={
                         assistantImages.find(
                           image => image.path === item.image_path
