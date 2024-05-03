@@ -156,6 +156,7 @@ export const AssistantItem: FC<AssistantItemProps> = ({ assistant }) => {
       icon={
         imageLink ? (
           <Image
+            unoptimized
             style={{ width: "30px", height: "30px" }}
             className="rounded"
             src={imageLink}

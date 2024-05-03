@@ -205,6 +205,7 @@ export const QuickSettings: FC<QuickSettingsProps> = ({}) => {
           {selectedAssistant &&
             (selectedAssistantImage ? (
               <Image
+                unoptimized
                 style={{ width: "24px", height: "24px" }}
                 className="rounded-full"
                 src={selectedAssistantImage}

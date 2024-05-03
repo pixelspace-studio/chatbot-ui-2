@@ -219,6 +219,7 @@ export const Message: FC<MessageProps> = ({
               {message.role === "assistant" ? (
                 messageAssistantImage ? (
                   <Image
+                    unoptimized
                     style={{
                       width: `${ICON_SIZE}px`,
                       height: `${ICON_SIZE}px`
@@ -244,6 +245,7 @@ export const Message: FC<MessageProps> = ({
                 )
               ) : profile?.image_url ? (
                 <Image
+                  unoptimized
                   className={`size-6 rounded-full`}
                   src={profile?.image_url}
                   height={14}
@@ -388,6 +390,7 @@ export const Message: FC<MessageProps> = ({
 
             return (
               <Image
+                unoptimized
                 key={index}
                 className="cursor-pointer rounded hover:opacity-50"
                 src={path.startsWith("data") ? path : item?.base64}

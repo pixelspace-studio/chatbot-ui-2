@@ -112,6 +112,7 @@ export const SidebarItem: FC<SidebarItemProps> = ({
       const assistant = item as any
       iconComponent = (assistant.image_path as any) ? (
         <Image
+          unoptimized
           src={
             assistantImages.find(image => image.path === assistant.image_path)
               ?.url || ""

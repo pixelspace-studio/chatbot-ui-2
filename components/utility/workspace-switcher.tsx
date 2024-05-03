@@ -118,6 +118,7 @@ export const WorkspaceSwitcher: FC<WorkspaceSwitcherProps> = ({}) => {
             <div className="flex items-center">
               {workspaceImage ? (
                 <Image
+                  unoptimized
                   style={{ width: "22px", height: "22px" }}
                   className="mr-2 rounded"
                   src={imageSrc}

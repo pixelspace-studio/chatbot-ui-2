@@ -38,6 +38,7 @@ export const QuickSettingOption: FC<QuickSettingOptionProps> = ({
           />
         ) : image ? (
           <Image
+            unoptimized
             style={{ width: "24px", height: "24px" }}
             className="rounded-full"
             src={image}
