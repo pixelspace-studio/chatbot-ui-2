@@ -45,7 +45,7 @@ export default function ChatPage() {
           <div className="flex grow flex-col items-center justify-center" />
 
           <div className="flex w-full flex-row items-center justify-center">
-            <div className="flex w-[300px] items-center justify-center pb-8 sm:w-[400px] md:w-[500px] lg:w-[660px] xl:w-[714px]">
+            <div className="relative w-full px-11 pb-8 pt-5 md:w-[500px] lg:w-[660px] xl:w-[800px]">
               <ChatInput />
             </div>
           </div>
