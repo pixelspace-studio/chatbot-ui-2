@@ -40,7 +40,7 @@ export const SidebarSwitcher: FC<SidebarSwitcherProps> = ({
           className="rounded-full"
         />
       </div>
-      <TabsList className="bg-pixelspace-gray-90 mt-148 mb-auto flex flex-col space-y-4">
+      <TabsList className="bg-pixelspace-gray-90 mb-auto flex h-auto flex-col space-y-4">
         <hr className="border-pixelspace-gray-60 w-4 border" />
         <SidebarSwitchItem
           icon={
@@ -94,7 +94,7 @@ export const SidebarSwitcher: FC<SidebarSwitcherProps> = ({
           onContentTypeChange={onContentTypeChange}
         />
 
-        <hr className="border-pixelspace-gray-60 w-16 border" />
+        <hr className="border-pixelspace-gray-60 w-4 border" />
 
         <SidebarSwitchItem
           icon={
