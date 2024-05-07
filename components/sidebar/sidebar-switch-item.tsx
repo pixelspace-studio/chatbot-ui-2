@@ -34,16 +34,18 @@ export const SidebarSwitchItem: FC<SidebarSwitchItemProps> = ({
   }
 
   return (
-    <WithTooltip
-      display={labelTooltip}
-      trigger={
-        <TabsTrigger
-          value={contentType}
-          onClick={() => onContentTypeChange(contentType as ContentType)}
-        >
-          {icon}
-        </TabsTrigger>
-      }
-    />
+    <div style={{ marginTop: 32 }}>
+      <WithTooltip
+        display={labelTooltip}
+        trigger={
+          <TabsTrigger
+            value={contentType}
+            onClick={() => onContentTypeChange(contentType as ContentType)}
+          >
+            {icon}
+          </TabsTrigger>
+        }
+      />
+    </div>
   )
 }

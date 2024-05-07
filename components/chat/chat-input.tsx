@@ -359,12 +359,12 @@ export const ChatInput: FC<ChatInputProps> = ({}) => {
           paddingTop: 10,
           paddingBottom: 10
         }}
-        className="border-input bg-pixelspace-gray-60 mt-3 flex min-h-[56px] w-full justify-center rounded-[30px] border-2  xl:w-[714px] xl:rounded-[50px]"
+        className="border-input bg-pixelspace-gray-60 mt-3 flex min-h-[56px] w-full justify-between rounded-[30px] border-2 p-4  xl:w-[714px] xl:rounded-[50px]"
       >
         <div className="absolute bottom-[76px] left-0 max-h-[300px] w-full overflow-auto rounded-xl dark:border-none">
           <ChatCommandInput />
         </div>
-        <div className="flex items-end justify-center">
+        <div className="flex items-center justify-center">
           {/* Hidden input to select files from device */}
           <div
             className={`flex items-center ${transcriptionLoading && "mr-[365px]"}`}
@@ -450,7 +450,7 @@ export const ChatInput: FC<ChatInputProps> = ({}) => {
         >
           <TextareaAutosize
             textareaRef={chatInputRef}
-            className={`bg-pixelspace-gray-60 ${isRecording || voiceRecorder ? "placeholder:text-pixelspace-gray-60" : "placeholder:text-pixelspace-gray-40"} placeholder:font-libre-franklin focus-visible:ring-ring mx-1 flex xl:mx-3 ${isRecording || transcriptionLoading ? "w-full xl:w-[509px]" : "w-full xl:w-[550px]"} resize-none rounded-md border-none bg-transparent text-sm  focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50`}
+            className={`bg-pixelspace-gray-60 ${isRecording || voiceRecorder ? "placeholder:text-pixelspace-gray-60" : "placeholder:text-pixelspace-gray-40"} placeholder:font-libre-franklin focus-visible:ring-ring mx-1 flex xl:mx-3 ${isRecording || transcriptionLoading ? "w-full xl:w-[509px]" : "w-full xl:w-[550px]"} resize-none rounded-md border-none bg-transparent text-sm  focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 sm:w-[250px]`}
             placeholder={t(
               `${isRecording ? "" : "Ask anything. Type “@” for assistants, “/” for prompts, “#” for files & “!” for actions"}`
             )}
@@ -466,7 +466,7 @@ export const ChatInput: FC<ChatInputProps> = ({}) => {
           />
         </div>
 
-        <div className="flex cursor-pointer items-end justify-center hover:opacity-50">
+        <div className="flex cursor-pointer items-center justify-center hover:opacity-50">
           {isGenerating ? (
             <button
               className="bg-pixelspace-pink size-8 rounded-full"
