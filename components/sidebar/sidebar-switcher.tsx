@@ -29,18 +29,18 @@ export const SidebarSwitcher: FC<SidebarSwitcherProps> = ({
   contentType
 }) => {
   return (
-    <div className="border-pixelspace-gray-60 bg-pixelspace-gray-90 flex h-[calc(100dvh)] flex-col justify-between border-r px-4 pb-6 pt-8">
+    <div className="border-pixelspace-gray-60 bg-pixelspace-gray-90 flex h-[calc(100dvh)] flex-col justify-between border-r px-5 pb-6 pt-8">
       <div className="mb-4 flex flex-col items-center justify-center">
         <Image
           unoptimized
           src={pixelspaceLogo.src}
           alt={"pixelspace_logo"}
-          width={32}
-          height={32}
+          width={18}
+          height={18}
           className="rounded-full"
         />
       </div>
-      <TabsList className="bg-pixelspace-gray-90 grid h-[calc(100dvh)] grid-rows-9 space-y-4">
+      <TabsList className="bg-pixelspace-gray-90 mb-auto flex h-auto flex-col space-y-4">
         <hr className="border-pixelspace-gray-60 w-4 border" />
         <SidebarSwitchItem
           icon={
@@ -94,7 +94,7 @@ export const SidebarSwitcher: FC<SidebarSwitcherProps> = ({
           onContentTypeChange={onContentTypeChange}
         />
 
-        <hr className="border-pixelspace-gray-60 border" />
+        <hr className="border-pixelspace-gray-60 w-4 border" />
 
         <SidebarSwitchItem
           icon={
