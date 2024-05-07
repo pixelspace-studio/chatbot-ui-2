@@ -350,10 +350,10 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
         {profile.image_url ? (
           <Image
             unoptimized
-            className="mt-2 size-[35px] cursor-pointer rounded-full hover:opacity-50"
+            className="size-[18px] cursor-pointer rounded-full hover:opacity-50"
             src={profile.image_url + "?" + new Date().getTime()}
-            height={35}
-            width={35}
+            height={18}
+            width={18}
             alt={"Image"}
           />
         ) : (
