@@ -75,20 +75,28 @@ const ImagePicker: FC<ImagePickerProps> = ({
   return (
     <div>
       {previewSrc && (
-        <Image
-          unoptimized
-          style={{ width: `${width}px`, height: `${width}px` }}
-          className="rounded-full"
-          height={width}
-          width={width}
-          src={previewSrc}
-          alt={"Image"}
-        />
+        <div
+          style={{
+            position: "relative",
+            width: `${width}px`,
+            height: `${height}px`
+          }}
+        >
+          <Image
+            unoptimized
+            className="rounded-full"
+            src={previewSrc}
+            alt={"Image"}
+            objectFit="cover"
+            objectPosition="center"
+            layout="fill"
+          />
+        </div>
       )}
 
       <div
         role="button"
-        className={`bg-pixelspace-gray-70 border-pixelspace-gray-50 focus:border-pixelspace-gray-40  text-pixelspace-gray-20 mt-1 flex h-[42px] cursor-pointer items-center rounded-sm border px-3`}
+        className={`bg-pixelspace-gray-70 border-pixelspace-gray-50 focus:border-pixelspace-gray-40 text-pixelspace-gray-20 mt-2 flex h-[42px] cursor-pointer items-center rounded-sm border px-3`}
         onClick={() => document.getElementById("fileInput")?.click()}
       >
         <span className="hover:text-pixelspace-gray-3 font-['Libre Franklin'] mr-3 whitespace-nowrap text-sm font-normal leading-[25.20px]">
@@ -108,6 +116,8 @@ const ImagePicker: FC<ImagePickerProps> = ({
               width={width}
               src={previewSrc}
               alt={"Image"}
+              objectPosition="center"
+              objectFit="contain"
             />
             <div className=" flex-1">
               <span className="font-['Libre Franklin'] truncate text-sm font-normal leading-[25.20px]">
