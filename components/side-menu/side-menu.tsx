@@ -100,7 +100,7 @@ export default function SideMenu(): JSX.Element {
         >
           <FontAwesomeIcon
             icon={isCollapsed ? faChevronLeft : faChevronRight}
-            className="hover:text-pixelspace-gray-40 text-[20px]"
+            className="text-pixelspace-gray-40 hover:text-pixelspace-gray-3 text-[20px]"
           />
         </Button>
       </div>
