@@ -191,7 +191,7 @@ export const WorkspaceSettings: FC<WorkspaceSettingsProps> = ({}) => {
         side="workspaceSetting"
         onKeyDown={handleKeyDown}
       >
-        <div className="grow overflow-auto">
+        <div className="grow overflow-auto pr-5">
           <SheetHeader>
             <SheetTitle className="flex items-center justify-between">
               Workspace Settings

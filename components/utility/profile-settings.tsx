@@ -371,7 +371,7 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
         side="userSetting"
         onKeyDown={handleKeyDown}
       >
-        <div className="grow overflow-auto">
+        <div className="grow overflow-auto pr-5">
           <SheetHeader className="flex flex-row justify-between pr-[22px]">
             <SheetTitle className="flex items-center justify-between space-x-2">
               <div className="font-helvetica-now">User Settings</div>
