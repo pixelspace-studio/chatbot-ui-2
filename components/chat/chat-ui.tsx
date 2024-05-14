@@ -210,7 +210,7 @@ export const ChatUI: FC<ChatUIProps> = ({}) => {
         />
       </div>
 
-      <div className="absolute right-4 top-1 flex h-[40px] items-center space-x-3">
+      <div className="invisible absolute right-4 top-1 flex h-[40px] items-center space-x-3 sm:visible">
         <ChatSecondaryButtons />
       </div>
 
