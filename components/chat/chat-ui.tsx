@@ -210,11 +210,11 @@ export const ChatUI: FC<ChatUIProps> = ({}) => {
         />
       </div>
 
-      <div className="absolute right-4 top-1 flex h-[40px] items-center space-x-3">
+      <div className="invisible absolute right-4 top-1 flex h-[40px] items-center space-x-3 sm:visible">
         <ChatSecondaryButtons />
       </div>
 
-      <div className="bg-pixelspace-gray-90 text-pixelspace-gray-3 flex max-h-[50px] min-h-[50px] items-center justify-center text-[20px] font-normal leading-[43.20px]">
+      <div className="bg-pixelspace-gray-90 text-pixelspace-gray-3 flex max-h-[50px] min-h-[50px] w-[100%] items-center justify-center text-[20px] font-normal leading-[43.20px]">
         <p
           className={`${collapsedClass} mx-[32px] truncate px-[32px] text-center`}
         >
@@ -233,7 +233,7 @@ export const ChatUI: FC<ChatUIProps> = ({}) => {
         <div ref={messagesEndRef} />
       </div>
 
-      <div className="relative w-full px-11 pb-8 pt-5 md:w-[500px] lg:w-[660px] xl:w-[800px]">
+      <div className="relative w-full px-11 pb-8 pt-5 sm:w-[540px] md:w-[640px] lg:w-[740px] xl:w-[800px]">
         <ChatInput />
       </div>
 

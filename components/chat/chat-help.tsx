@@ -57,7 +57,7 @@ export const ChatHelp: FC<ChatHelpProps> = ({}) => {
             ></Link>
           </div>
 
-          <div className="flex space-x-2">
+          {/* <div className="flex space-x-2">
             <Link
               className="cursor-pointer hover:opacity-50"
               href="/help"
@@ -66,7 +66,7 @@ export const ChatHelp: FC<ChatHelpProps> = ({}) => {
             >
               <IconHelpCircle size={24} />
             </Link>
-          </div>
+          </div> */}
         </DropdownMenuLabel>
 
         <DropdownMenuSeparator />

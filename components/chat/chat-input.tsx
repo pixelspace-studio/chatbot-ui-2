@@ -450,14 +450,14 @@ export const ChatInput: FC<ChatInputProps> = ({}) => {
         >
           <TextareaAutosize
             textareaRef={chatInputRef}
-            className={`bg-pixelspace-gray-60 ${isRecording || voiceRecorder ? "placeholder:text-pixelspace-gray-60" : "placeholder:text-pixelspace-gray-40"} placeholder:font-libre-franklin focus-visible:ring-ring mx-1 flex xl:mx-3 ${isRecording || transcriptionLoading ? "w-full xl:w-[509px]" : "w-full xl:w-[550px]"} resize-none rounded-md border-none bg-transparent text-sm  focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 sm:w-[250px]`}
+            className={`bg-pixelspace-gray-60 ${isRecording || voiceRecorder ? "placeholder:text-pixelspace-gray-60" : "placeholder:text-pixelspace-gray-40"} placeholder:font-libre-franklin focus-visible:ring-ring mx-1 flex xl:mx-3 ${isRecording || transcriptionLoading ? "w-full xl:w-[509px]" : "w-full xl:w-[550px]"} h-full resize-none rounded-md border-none bg-transparent  text-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:w-[250px]`}
             placeholder={t(
               `${isRecording ? "" : "Ask anything. Type “@” for assistants, “/” for prompts, “#” for files & “!” for actions"}`
             )}
             onValueChange={handleInputChange}
             value={userInput}
             minRows={1}
-            maxRows={18}
+            maxRows={6}
             onKeyDown={handleKeyDown}
             onPaste={handlePaste}
             onCompositionStart={() => setIsTyping(true)}
