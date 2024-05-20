@@ -10,6 +10,7 @@ export type LLMID =
 
 // OpenAI Models (UPDATED 1/29/24)
 export type OpenAILLMID =
+  | "gpt-4o"
   | "gpt-4-turbo-preview" // GPT-4 Turbo
   | "gpt-4-vision-preview" // GPT-4 Vision
   | "gpt-4" // GPT-4
@@ -62,6 +63,12 @@ export interface LLM {
   hostedId: string
   platformLink: string
   imageInput: boolean
+  pricing?: {
+    currency: string
+    unit: string
+    inputCost: number
+    outputCost?: number
+  }
 }
 
 export interface OpenRouterLLM extends LLM {
