@@ -27,7 +27,7 @@ export default function ChatPage() {
   return (
     <>
       {chatMessages.length === 0 ? (
-        <div className="flex h-screen w-full flex-col">
+        <div className="flex h-screen w-full flex-col opacity-50">
           <div className="flex flex-row items-center justify-between">
             <div>
               <QuickSettings />
@@ -38,7 +38,7 @@ export default function ChatPage() {
             </div>
           </div>
 
-          <div className="flex h-[calc(100dvh)] w-full items-center justify-center">
+          <div className="flex h-[calc(90dvh)] w-full items-center justify-center sm:h-[calc(100dvh)]">
             <ChatBrand theme={theme === "dark" ? "dark" : "light"} />
           </div>
 

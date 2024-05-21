@@ -20,6 +20,7 @@ import { useParams, useRouter } from "next/navigation"
 import { ReactNode, useContext, useEffect, useState } from "react"
 import Loading from "../loading"
 import SideMenu from "@/components/side-menu/side-menu"
+import { useSideMenu } from "@/context/side-menu-context"
 
 interface WorkspaceLayoutProps {
   children: ReactNode
@@ -27,6 +28,8 @@ interface WorkspaceLayoutProps {
 
 export default function WorkspaceLayout({ children }: WorkspaceLayoutProps) {
   const router = useRouter()
+
+  const { isCollapsed } = useSideMenu()
 
   const params = useParams()
   const workspaceId = params?.workspaceid as string
@@ -190,7 +193,9 @@ export default function WorkspaceLayout({ children }: WorkspaceLayoutProps) {
         <div className="bg-pixelspace-gray-90 z-20 h-[calc(100dvh)]">
           <SideMenu />
         </div>
-        <div className="h-[calc(100dvh)] w-full">
+        <div
+          className={`h-[calc(100dvh)] w-full ${isCollapsed ? "opacity-30" : ""}`}
+        >
           <div className="h-[calc(100dvh)] w-full">{children}</div>
         </div>
       </div>
