@@ -27,7 +27,7 @@ export default function ChatPage() {
   return (
     <>
       {chatMessages.length === 0 ? (
-        <div className="flex h-screen w-full flex-col opacity-50">
+        <div className="flex h-screen w-full flex-col">
           <div className="flex flex-row items-center justify-between">
             <div>
               <QuickSettings />
