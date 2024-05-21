@@ -193,9 +193,7 @@ export default function WorkspaceLayout({ children }: WorkspaceLayoutProps) {
         <div className="bg-pixelspace-gray-90 z-20 h-[calc(100dvh)]">
           <SideMenu />
         </div>
-        <div
-          className={`h-[calc(100dvh)] w-full ${isCollapsed ? "opacity-30" : ""}`}
-        >
+        <div className={`h-[calc(100dvh)] w-full ${isCollapsed ? "" : ""}`}>
           <div className="h-[calc(100dvh)] w-full">{children}</div>
         </div>
       </div>
