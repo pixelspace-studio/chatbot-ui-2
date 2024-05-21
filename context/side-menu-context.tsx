@@ -24,11 +24,9 @@ interface SideMenuProviderProps {
 export const SideMenuProvider: React.FC<SideMenuProviderProps> = ({
   children
 }) => {
-  const storedValue =
-    typeof window !== "undefined"
-      ? window.localStorage.getItem(localStorageCollapsed)
-      : false
-  const defaultCollapsed = Boolean(storedValue)
+  const savedValue = window.localStorage.getItem(localStorageCollapsed)
+
+  const defaultCollapsed = savedValue == "true" ? true : false
 
   const [isCollapsed, setIsCollapsed] = useState<boolean>(defaultCollapsed)
 

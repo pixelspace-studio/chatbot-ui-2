@@ -24,10 +24,18 @@ import { faPaperclipVertical } from "@fortawesome/pro-regular-svg-icons"
 import RecordingTimer, {
   getMinutesAndSeconds
 } from "@/components/chat/RecordingTimer"
+import { useChatMobile } from "./chat-hooks/use-chat-mobile"
 
 interface ChatInputProps {}
 
 export const ChatInput: FC<ChatInputProps> = ({}) => {
+  const size = useChatMobile()
+  const isMobile = size.width !== undefined && size.width <= 768 // Puedes ajustar el tamaño según tus necesidades
+
+  const inputTextPlaceholder = isMobile
+    ? "Ask anything"
+    : "Ask anything. Type “@” for assistants, “/” for prompts, “#” for files & “!” for actions"
+
   const { t } = useTranslation()
 
   useHotkey("l", () => {
@@ -446,14 +454,12 @@ export const ChatInput: FC<ChatInputProps> = ({}) => {
           />
         </div>
         <div
-          className={`${transcriptionLoading && "hidden"} flex items-center justify-center`}
+          className={`${transcriptionLoading && "hidden"} ml-4 mr-auto flex items-center justify-center`}
         >
           <TextareaAutosize
             textareaRef={chatInputRef}
             className={`bg-pixelspace-gray-60 ${isRecording || voiceRecorder ? "placeholder:text-pixelspace-gray-60" : "placeholder:text-pixelspace-gray-40"} placeholder:font-libre-franklin focus-visible:ring-ring mx-1 flex xl:mx-3 ${isRecording || transcriptionLoading ? "w-full xl:w-[509px]" : "w-full xl:w-[550px]"} h-full resize-none rounded-md border-none bg-transparent  text-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:w-[250px]`}
-            placeholder={t(
-              `${isRecording ? "" : "Ask anything. Type “@” for assistants, “/” for prompts, “#” for files & “!” for actions"}`
-            )}
+            placeholder={t(`${isRecording ? "" : inputTextPlaceholder}`)}
             onValueChange={handleInputChange}
             value={userInput}
             minRows={1}

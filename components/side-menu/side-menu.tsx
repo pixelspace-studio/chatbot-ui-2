@@ -44,10 +44,10 @@ export default function SideMenu(): JSX.Element {
 
   const onClickSideMenuButton = () => {
     if (isCollapsed) {
-      localStorage.removeItem(localStorageCollapsed)
+      localStorage.setItem(localStorageCollapsed, "false")
       setIsCollapsed(false)
     } else {
-      localStorage.setItem(localStorageCollapsed, "1")
+      localStorage.setItem(localStorageCollapsed, "true")
       setIsCollapsed(true)
     }
   }
