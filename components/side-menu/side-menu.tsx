@@ -59,14 +59,14 @@ export default function SideMenu(): JSX.Element {
   return (
     //w-56
     <aside
-      className={`bg-pixelspace-gray-90 h-[calc(100dvh)] text-white ${
+      className={`bg-pixelspace-gray-90 text-white ${
         isCollapsed
           ? "side-menu w-[250px] max-w-[250px] xl:w-[450px] xl:max-w-[450px]"
           : "side-menu-collapsed"
       } `}
     >
       <div
-        className={`bg-pixelspace-gray-90 flex h-[calc(100dvh)] flex-row items-center ${
+        className={`bg-pixelspace-gray-90 flex flex-row items-center ${
           isCollapsed ? "items-center" : ""
         }`}
       >
@@ -92,7 +92,13 @@ export default function SideMenu(): JSX.Element {
         <Button
           className="z-40"
           style={{
-            marginLeft: isCollapsed ? `20px` : "20px"
+            marginLeft: isCollapsed ? `20px` : "0px",
+            position: isCollapsed ? "relative" : "absolute",
+            top: isCollapsed ? "0" : "45%",
+            padding: isCollapsed ? "8px" : "0",
+            backgroundColor: isCollapsed
+              ? "rgb(17 14 15 / var(--tw-bg-opacity))"
+              : "transparent"
           }}
           variant="ghost"
           size="icon"
