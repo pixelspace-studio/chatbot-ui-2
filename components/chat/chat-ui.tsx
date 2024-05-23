@@ -223,7 +223,7 @@ export const ChatUI: FC<ChatUIProps> = ({}) => {
       </div>
 
       <div
-        className={`flex h-[calc(100dvh)] w-full flex-col overflow-auto overflow-x-hidden ${isCollapsed ? "pl-6" : ""}`}
+        className={`flex h-[calc(80dvh)] w-full flex-col overflow-auto overflow-x-hidden ${isCollapsed ? "pl-6" : ""}`}
         onScroll={handleScroll}
       >
         <div ref={messagesStartRef} />

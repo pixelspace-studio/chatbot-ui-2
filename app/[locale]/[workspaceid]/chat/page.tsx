@@ -38,7 +38,7 @@ export default function ChatPage() {
             </div>
           </div>
 
-          <div className="flex h-[calc(90dvh)] w-full items-center justify-center sm:h-[calc(100dvh)]">
+          <div className="flex h-[calc(80dvh)] w-full items-center justify-center sm:h-[calc(80dvh)]">
             <ChatBrand theme={theme === "dark" ? "dark" : "light"} />
           </div>
 
