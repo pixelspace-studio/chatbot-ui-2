@@ -104,7 +104,7 @@ export const SidebarItem: FC<SidebarItemProps> = ({
       iconComponent = (
         <i
           className={`fa-regular fa-layer-group ${hoverClass}`}
-          style={{ fontSize: 12 }}
+          style={{ fontSize: 12, overflow: "visible" }}
         ></i>
       )
       break
@@ -126,7 +126,7 @@ export const SidebarItem: FC<SidebarItemProps> = ({
         <div className="bg-pixelspace-gray-60 flex size-5 items-center justify-center rounded-full">
           <i
             className="fa-regular fa-robot text-pixelspace-gray-20"
-            style={{ fontSize: 11 }}
+            style={{ fontSize: 11, width: 16, height: 16, overflow: "visible" }}
           ></i>
         </div>
       )
