@@ -233,7 +233,7 @@ export const SidebarDataList: FC<SidebarDataListProps> = ({
     <>
       <div
         ref={divRef}
-        className="bg-pixelspace-gray-90 mt-2 flex h-[calc(80vh)] flex-col overflow-y-auto overflow-x-hidden"
+        className="bg-pixelspace-gray-90 mt-2 flex flex-col overflow-y-auto overflow-x-hidden"
         onDrop={handleDrop}
       >
         {data.length === 0 && (

@@ -190,11 +190,11 @@ export default function WorkspaceLayout({ children }: WorkspaceLayoutProps) {
   return (
     <section className="w-full">
       <div className="bg-pixelspace-gray-90 flex w-full max-w-full flex-row">
-        <div className="bg-pixelspace-gray-90 z-20 h-[calc(100dvh)]">
+        <div className="bg-pixelspace-gray-90 z-20">
           <SideMenu />
         </div>
-        <div className={`h-[calc(100dvh)] w-full ${isCollapsed ? "" : ""}`}>
-          <div className="h-[calc(100dvh)] w-full">{children}</div>
+        <div className={`w-full ${isCollapsed ? "" : ""}`}>
+          <div className="w-full">{children}</div>
         </div>
       </div>
     </section>
