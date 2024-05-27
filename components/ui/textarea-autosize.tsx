@@ -35,6 +35,7 @@ export const TextareaAutosize: FC<TextareaAutosizeProps> = ({
   onCompositionEnd = () => {},
   isDisabled
 }) => {
+  const v = value == "" ? 1 : minRows > maxRows ? minRows : maxRows
   return (
     <ReactTextareaAutosize
       ref={textareaRef}
@@ -43,7 +44,7 @@ export const TextareaAutosize: FC<TextareaAutosizeProps> = ({
         className
       )}
       minRows={minRows}
-      maxRows={minRows > maxRows ? minRows : maxRows}
+      maxRows={v}
       placeholder={placeholder}
       value={value}
       maxLength={maxLength}
