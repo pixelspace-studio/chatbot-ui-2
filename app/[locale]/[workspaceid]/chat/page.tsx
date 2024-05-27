@@ -56,7 +56,7 @@ export default function ChatPage() {
             </div>
           </div>
 
-          <div className="absolute bottom-2 right-2 z-0 hidden md:block lg:bottom-4 lg:right-4">
+          <div className="bottom absolute bottom-2 right-2 z-0 md:block lg:bottom-4 lg:right-4">
             <ChatHelp />
           </div>
         </div>
