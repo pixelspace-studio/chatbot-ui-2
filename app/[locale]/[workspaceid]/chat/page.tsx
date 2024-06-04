@@ -50,7 +50,7 @@ export default function ChatPage() {
             style={{ flex: "none" }}
           />
 
-          <div className="flex w-full flex-row items-center justify-center">
+          <div className="mt-auto flex w-full flex-row items-center justify-center">
             <div className="relative w-full px-11 pb-8 pt-5 md:w-[500px] lg:w-[660px] xl:w-[800px]">
               <ChatInput />
             </div>
