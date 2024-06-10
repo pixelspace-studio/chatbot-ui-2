@@ -54,7 +54,7 @@ export const Sidebar: FC<SidebarProps> = ({ contentType, showSidebar }) => {
       className="border-pixelspace-gray-60 bg-pixelspace-gray-90 m-0 w-full space-y-2 border-r"
       value={contentType}
     >
-      <div className="flex flex-col py-3 ">
+      <div className="flex w-[calc(100vw-54px)] flex-col py-3 sm:w-[250px] xl:w-[362px]">
         <div className="border-pixelspace-gray-60 flex flex-row items-center justify-between gap-2.5 border-b px-3 pb-2">
           <WorkspaceSwitcher />
 

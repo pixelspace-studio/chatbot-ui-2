@@ -248,8 +248,8 @@ export const SidebarDataList: FC<SidebarDataListProps> = ({
           <div
             className={`h-[calc(100dvh)] ${
               isOverflowing
-                ? "w-[250px] xl:w-[calc(100%-8px)]"
-                : "w-[250px] xl:w-full"
+                ? "w-full sm:w-[250px] xl:w-[calc(100%-8px)]"
+                : "w-full sm:w-[250px] xl:w-full"
             } ${isOverflowing ? "mr-2" : ""}`}
           >
             {folders.map(folder => (
