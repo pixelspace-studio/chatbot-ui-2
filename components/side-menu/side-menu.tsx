@@ -90,9 +90,8 @@ export default function SideMenu(): JSX.Element {
           )}
         </nav>
         <Button
-          className="z-40"
           style={{
-            marginLeft: isCollapsed ? `20px` : "0px",
+            //marginLeft: isCollapsed ? `20px` : "0px",
             position: isCollapsed ? "relative" : "absolute",
             top: isCollapsed ? "0" : "45%",
             padding: isCollapsed ? "8px" : "0",
@@ -100,6 +99,7 @@ export default function SideMenu(): JSX.Element {
               ? "rgb(17 14 15 / var(--tw-bg-opacity))"
               : "transparent"
           }}
+          className={`z-40 ${isCollapsed ? "-ml-9" : "ml-[0px]"} ${isCollapsed ? "sm:ml-4" : "sm:ml-[0px]"}`}
           variant="ghost"
           size="icon"
           onClick={onClickSideMenuButton}

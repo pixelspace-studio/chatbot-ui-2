@@ -234,7 +234,7 @@ export const ChatUI: FC<ChatUIProps> = ({}) => {
       </div>
 
       <div
-        className={`relative mt-auto w-full px-11 pb-8 pt-5 sm:w-[540px] md:w-[640px] lg:w-[740px] xl:w-[800px] ${isCollapsed ? "ml-6" : ""}`}
+        className={`relative mt-auto w-full px-8 pb-8 pt-5 sm:w-[540px] sm:px-11 md:w-[640px] lg:w-[740px] xl:w-[800px]${isCollapsed ? "ml-6" : ""}`}
       >
         <ChatInput />
       </div>
