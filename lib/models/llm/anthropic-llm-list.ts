@@ -45,6 +45,16 @@ const CLAUDE_3_SONNET: LLM = {
   imageInput: true
 }
 
+// Claude 3 Sonnet (UPDATED 03/04/24)
+const CLAUDE_3_5_SONNET: LLM = {
+  modelId: "claude-3-5-sonnet-20240620",
+  modelName: "Claude 3.5 Sonnet",
+  provider: "anthropic",
+  hostedId: "claude-3-5-sonnet-20240620",
+  platformLink: ANTHROPIC_PLATFORM_LINK,
+  imageInput: true
+}
+
 // Claude 3 Opus (UPDATED 03/04/24)
 const CLAUDE_3_OPUS: LLM = {
   modelId: "claude-3-opus-20240229",
@@ -60,5 +70,6 @@ export const ANTHROPIC_LLM_LIST: LLM[] = [
   CLAUDE_INSTANT,
   CLAUDE_3_HAIKU,
   CLAUDE_3_SONNET,
+  CLAUDE_3_5_SONNET,
   CLAUDE_3_OPUS
 ]
