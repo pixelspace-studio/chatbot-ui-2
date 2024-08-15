@@ -34,7 +34,11 @@ export async function POST(request: NextRequest) {
           content: messageContent.map((content: any) => {
             if (typeof content === "string") {
               // Handle the case where content is a string
-              return { type: "text", text: content }
+              return {
+                type: "text",
+                text: content,
+                cache_control: { type: "ephemeral" }
+              }
             } else if (
               content?.type === "image_url" &&
               content?.image_url?.url?.length
