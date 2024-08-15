@@ -60,7 +60,8 @@ export async function POST(request: NextRequest) {
     )
 
     const anthropic = new Anthropic({
-      apiKey: profile.anthropic_api_key || ""
+      apiKey: profile.anthropic_api_key || "",
+      defaultHeaders: { "anthropic-beta": "prompt-caching-2024-07-31" }
     })
 
     try {
