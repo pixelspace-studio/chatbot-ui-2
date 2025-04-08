@@ -47,10 +47,10 @@ const CLAUDE_3_SONNET: LLM = {
 
 // Claude 3.7 Sonnet (NEW)
 const CLAUDE_3_7_SONNET: LLM = {
-  modelId: "claude-3.7-sonnet-20250219",
+  modelId: "claude-3-7-sonnet-20250219",
   modelName: "Claude 3.7 Sonnet",
   provider: "anthropic",
-  hostedId: "claude-3.7-sonnet-20250219",
+  hostedId: "claude-3-7-sonnet-20250219",
   platformLink: ANTHROPIC_PLATFORM_LINK,
   imageInput: true
 }
