@@ -3,106 +3,30 @@ import { LLM } from "@/types"
 const ANTHROPIC_PLATFORM_LINK =
   "https://docs.anthropic.com/claude/reference/getting-started-with-the-api"
 
-// Anthropic Models (UPDATED 03/13/24) -----------------------------
+// Anthropic Models (UPDATED 06/2026) -----------------------------
 
-// Claude 2 (UPDATED 12/21/23)
-const CLAUDE_2: LLM = {
-  modelId: "claude-2.1",
-  modelName: "Claude 2",
+// Claude Sonnet 4.6
+// Dateless ID: snapshot fijo de la generación 4.6 según docs de Anthropic.
+// Cuando salga Sonnet 4.7 / 5.0, hay que actualizar este string.
+const CLAUDE_SONNET_4_6: LLM = {
+  modelId: "claude-sonnet-4-6",
+  modelName: "Claude Sonnet 4.6",
   provider: "anthropic",
-  hostedId: "claude-2.1",
-  platformLink: ANTHROPIC_PLATFORM_LINK,
-  imageInput: false
-}
-
-// Claude Instant (UPDATED 12/21/23)
-const CLAUDE_INSTANT: LLM = {
-  modelId: "claude-instant-1.2",
-  modelName: "Claude Instant",
-  provider: "anthropic",
-  hostedId: "claude-instant-1.2",
-  platformLink: ANTHROPIC_PLATFORM_LINK,
-  imageInput: false
-}
-
-// Claude 3 Haiku (UPDATED 03/13/24)
-const CLAUDE_3_HAIKU: LLM = {
-  modelId: "claude-3-haiku-20240307",
-  modelName: "Claude 3 Haiku",
-  provider: "anthropic",
-  hostedId: "claude-3-haiku-20240307",
+  hostedId: "claude-sonnet-4-6",
   platformLink: ANTHROPIC_PLATFORM_LINK,
   imageInput: true
 }
 
-// Claude 3 Sonnet (UPDATED 03/04/24)
-const CLAUDE_3_SONNET: LLM = {
-  modelId: "claude-3-sonnet-20240229",
-  modelName: "Claude 3 Sonnet",
+// Claude Haiku 4.5
+// Dateless ID es alias al snapshot más reciente de Haiku 4.5.
+// Cuando salga Haiku 4.6, hay que actualizar este string.
+const CLAUDE_HAIKU_4_5: LLM = {
+  modelId: "claude-haiku-4-5",
+  modelName: "Claude Haiku 4.5",
   provider: "anthropic",
-  hostedId: "claude-3-sonnet-20240229",
+  hostedId: "claude-haiku-4-5",
   platformLink: ANTHROPIC_PLATFORM_LINK,
   imageInput: true
 }
 
-// Claude 3.7 Sonnet (NEW)
-const CLAUDE_3_7_SONNET: LLM = {
-  modelId: "claude-3-7-sonnet-20250219",
-  modelName: "Claude 3.7 Sonnet",
-  provider: "anthropic",
-  hostedId: "claude-3-7-sonnet-20250219",
-  platformLink: ANTHROPIC_PLATFORM_LINK,
-  imageInput: true
-}
-
-// Claude 3.5 Sonnet (UPDATED 03/04/24)
-const CLAUDE_3_5_SONNET: LLM = {
-  modelId: "claude-3-5-sonnet-20240620",
-  modelName: "Claude 3.5 Sonnet",
-  provider: "anthropic",
-  hostedId: "claude-3-5-sonnet-20240620",
-  platformLink: ANTHROPIC_PLATFORM_LINK,
-  imageInput: true
-}
-
-// Claude 3 Opus (UPDATED 03/04/24)
-const CLAUDE_3_OPUS: LLM = {
-  modelId: "claude-3-opus-20240229",
-  modelName: "Claude 3 Opus",
-  provider: "anthropic",
-  hostedId: "claude-3-opus-20240229",
-  platformLink: ANTHROPIC_PLATFORM_LINK,
-  imageInput: true
-}
-
-// Claude Opus 4 (NEW)
-const CLAUDE_OPUS_4: LLM = {
-  modelId: "claude-opus-4-20250514",
-  modelName: "Claude Opus 4",
-  provider: "anthropic",
-  hostedId: "claude-opus-4-20250514",
-  platformLink: ANTHROPIC_PLATFORM_LINK,
-  imageInput: true
-}
-
-// Claude Sonnet 4 (NEW)
-const CLAUDE_SONNET_4: LLM = {
-  modelId: "claude-sonnet-4-20250514",
-  modelName: "Claude Sonnet 4",
-  provider: "anthropic",
-  hostedId: "claude-sonnet-4-20250514",
-  platformLink: ANTHROPIC_PLATFORM_LINK,
-  imageInput: true
-}
-
-export const ANTHROPIC_LLM_LIST: LLM[] = [
-  CLAUDE_2,
-  CLAUDE_INSTANT,
-  CLAUDE_3_HAIKU,
-  CLAUDE_3_SONNET,
-  CLAUDE_3_7_SONNET,
-  CLAUDE_3_5_SONNET,
-  CLAUDE_3_OPUS,
-  CLAUDE_OPUS_4,
-  CLAUDE_SONNET_4
-]
+export const ANTHROPIC_LLM_LIST: LLM[] = [CLAUDE_SONNET_4_6, CLAUDE_HAIKU_4_5]
