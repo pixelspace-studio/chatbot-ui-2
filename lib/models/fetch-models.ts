@@ -5,7 +5,10 @@ import { LLM_LIST_MAP } from "./llm/llm-list"
 
 export const fetchHostedModels = async (profile: Tables<"profiles">) => {
   try {
-    const providers = ["google", "anthropic", "mistral", "groq", "perplexity"]
+    // Providers deshabilitados (06/2026): google, mistral, groq, perplexity.
+    // Para resucitarlos, agregarlos a este array y descomentar las entradas
+    // correspondientes en lib/models/llm/llm-list.ts.
+    const providers = ["anthropic"]
 
     if (profile.use_azure_openai) {
       providers.push("azure")
