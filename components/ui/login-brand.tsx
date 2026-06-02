@@ -59,6 +59,19 @@ export const LoginBrand: FC<LoginBrandProps> = ({ theme = "dark" }) => {
           fill="white"
         />
       </svg>
+
+      <span
+        className="font-helvetica-now text-white"
+        style={{
+          fontSize: 26,
+          fontWeight: 700,
+          letterSpacing: "-0.01em",
+          lineHeight: 1,
+          marginLeft: 8
+        }}
+      >
+        AI
+      </span>
     </div>
   )
 }
